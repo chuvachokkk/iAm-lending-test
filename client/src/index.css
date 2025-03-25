@@ -1,0 +1,77 @@
+/* index.css */
+
+/* 1) Цветовая палитра: 
+   - Тёмный текст (черный).
+   - Акцентный цвет (примерно коричнево-бежевый) для «i».
+   - Светлый фон для всего лендинга. 
+*/
+:root {
+    --color-text: #000000; /* основной цвет текста */
+    --color-accent: #b38e69; /* пример коричнево-бежевого (регулируйте под свой градиент) */
+    --color-bg: #ffffff; /* цвет фона */
+    --color-bg-section: #f8f6f5; /* дополнительный светлый цвет для секций */
+    --color-border: #ccc; /* для границ таблиц и т.д. */
+  
+    --font-family: 'Inter', sans-serif;
+    --transition-default: 0.3s ease;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-family);
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  /* Сброс отступов для заголовков, абзацев и т.д. */
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color var(--transition-default);
+  }
+  
+  a:hover {
+    color: var(--color-accent);
+  }
+  
+  /* Класс-обёртка для секций, если хотите единообразные отступы */
+  .section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Базовые стили для заголовков секций */
+  .section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  /* Кнопки (общий класс) */
+  .btn {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: background var(--transition-default);
+  }
+  
+  .btn:hover {
+    background: #9f7a55; /* чуть темнее акцентного */
+  }
+  

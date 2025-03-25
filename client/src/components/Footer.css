@@ -1,0 +1,20 @@
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.socials a {
+  margin: 0 8px;
+  transition: transform 0.3s ease;
+}
+
+.socials a:hover {
+  transform: scale(1.1);
+}

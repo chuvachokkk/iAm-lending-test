@@ -1,0 +1,84 @@
+.services {
+  background-color: var(--color-bg-section, #f8f6f5);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Контейнер для кнопок и слайдера */
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Кнопки навигации */
+.carousel-button {
+  background: var(--color-accent, #b38e69);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+.carousel-button:hover {
+  background: #9f7a55;
+}
+
+/* Обёртка для слайдера */
+.carousel-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Скрываем стандартную полосу прокрутки для Webkit-браузеров */
+.carousel-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Каждая карточка */
+.card {
+  flex: 0 0 280px; /* фиксированная ширина карточки */
+  background: #fff;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.card-content .price {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-content .support {
+  color: #555;
+  font-size: 0.9rem;
+}
