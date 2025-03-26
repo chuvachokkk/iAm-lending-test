@@ -6,8 +6,8 @@ function Hero() {
     <section id="hero" className="hero">
       <div className="hero-content">
         <h1>Разработка веб-сайтов и приложений</h1>
-        <p>Мы помогаем вашему бизнесу расти, создавая качественные IT-решения</p>
-        <a href="#services" className="hero-btn">Наши услуги</a>
+        <p>тут можно сделать какой нибудь текст , именно про описание компании и т.д.</p>
+        <a href="#contacts" className="hero-btn">Связаться с нами</a>
       </div>
     </section>
   );

@@ -1,36 +1,47 @@
 /* Hero.css */
 
 .logo img {
-  width: 100px; /* Устанавливаем нужную ширину */
+  width: 100px; /* Устанавливаем нужную ширину логотипа */
   height: auto; /* Сохраняем пропорции изображения */
 }
 
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 100px 20px;
-    text-align: center;
-    background: var(--color-bg-section);
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-    line-height: 1.5;
-  }
-  
-  .hero-btn {
-    font-size: 1rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
+  display: flex; /* Используем flex для выравнивания элементов */
+  align-items: center; /* Центрируем элементы по вертикали */
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  flex-direction: column; /* Располагаем элементы по вертикали */
+  padding: 100px 20px; /* Отступы сверху/снизу и по бокам */
+  text-align: center; /* Центрируем текст */
+  background: var(--color-bg-section); /* Фоновый цвет секции */
+}
+
+.hero h1 {
+  font-size: 2.5rem; /* Размер заголовка */
+  margin-bottom: 20px; /* Отступ снизу от заголовка */
+}
+
+.hero p {
+  font-size: 1.2rem; /* Размер текста */
+  max-width: 600px; /* Ограничение ширины абзаца */
+  margin: 0 auto 30px auto; /* Центрирование абзаца и отступ снизу */
+  line-height: 1.5; /* Межстрочный интервал */
+}
+
+.hero-btn {
+  font-size: 1rem;             /* Размер текста кнопки */
+  font-weight: 500;            /* Толщина шрифта */
+  text-transform: uppercase;   /* Преобразование текста в верхний регистр */
+  letter-spacing: 1px;         /* Расстояние между буквами */
+  padding: 10px 20px;          /* Внутренние отступы для увеличения области клика */
+  background-color:#9f7a55;   /* Фоновый цвет кнопки (можно заменить на нужный вам) */
+  color: #fff;                 /* Цвет текста кнопки */
+  border: none;                /* Убираем рамку */
+  border-radius: 4px;          /* Скругляем углы кнопки */
+  cursor: pointer;             /* Изменяем указатель при наведении на кнопку */
+  text-decoration: none;       /* Убираем подчёркивание у ссылки */
+  transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.hero-btn:hover {
+  background-color: #9f7a55;
+}
