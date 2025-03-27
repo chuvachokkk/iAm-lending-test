@@ -1,72 +1,42 @@
 import React from 'react';
-import './Services.css';
+// import './Services.css';
 
-// Массив с данными об услугах
 const servicesData = [
-  { 
-    title: 'Лендинг', 
-    price: 'от 20 000 руб.', 
-    support: 'тут будет описание что это',
-    image: 'https://avatars.mds.yandex.net/i?id=ec2aa17f80982b72eca5b4261d29a0589eca1e34-6906583-images-thumbs&n=13'
+  {
+    title: 'Сайты под ключ',
+    description: 'От лендингов до интернет-магазинов – с продуманным UX и высокой конверсией.Тут с иконками которые я потом по ищу в интернете',
   },
-  { 
-    title: 'Одностраничный сайт', 
-    price: 'от 35 000 руб.', 
-    support: 'тут будет описание что это',
-    image: 'https://avatars.mds.yandex.net/i?id=ec2aa17f80982b72eca5b4261d29a0589eca1e34-6906583-images-thumbs&n=13'
+  {
+    title: 'Мобильные приложения',
+    description: 'iOS и Android-приложения, которые решают задачи бизнеса и пользователей.Тут с иконками которые я потом по ищу в интернете',
   },
-  { 
-    title: 'Многостраничник', 
-    price: 'от 50 000 руб.', 
-    support: 'тут будет описание что это',
-    image: 'https://avatars.mds.yandex.net/i?id=ec2aa17f80982b72eca5b4261d29a0589eca1e34-6906583-images-thumbs&n=13'
+  {
+    title: 'Дизайн и брендинг',
+    description: 'Запоминающийся визуальный стиль, который усиливает доверие к вашему бренду.Тут с иконками которые я потом по ищу в интернете',
   },
-  { 
-    title: 'Онлайн магазин', 
-    price: 'от 70 000 руб.', 
-    support: 'тут будет описание что это',
-    image: 'https://avatars.mds.yandex.net/i?id=ec2aa17f80982b72eca5b4261d29a0589eca1e34-6906583-images-thumbs&n=13'
+  {
+    title: 'Реклама и продвижение',
+    description: 'Настроим рекламу, которая привлекает клиентов, а не просто тратит бюджет.Тут с иконками которые я потом по ищу в интернете',
   },
-  { 
-    title: 'Разработка приложений', 
-    price: 'от 80 000 руб.', 
-    support: 'тут будет описание что это',
-    image: 'https://avatars.mds.yandex.net/i?id=ec2aa17f80982b72eca5b4261d29a0589eca1e34-6906583-images-thumbs&n=13'
-  },
-  { 
-    title: 'Разработка чат ботов', 
-    price: 'от 15 000 руб.', 
-    support: 'тут будет описание что это',
-    image: 'https://avatars.mds.yandex.net/i?id=ec2aa17f80982b72eca5b4261d29a0589eca1e34-6906583-images-thumbs&n=13'
-  },
-  { 
-    title: 'Разработка парсеров', 
-    price: 'от 15 000 руб.', 
-    support: 'тут будет описание что это',
-    image: 'https://avatars.mds.yandex.net/i?id=ec2aa17f80982b72eca5b4261d29a0589eca1e34-6906583-images-thumbs&n=13'
-  },
+  {
+    title: 'Ещё что то добавим ?)',
+    description: 'Или просто более подробно распишем ?',
+  }
 ];
 
 function Services() {
   return (
     <section id="services" className="services">
-      <h2>Услуги и цены</h2>
-      {/* Контейнер для карточек, реализованный с помощью CSS Grid */}
+      <h2>Что мы делаем</h2>
       <div className="services-grid">
         {servicesData.map((service, index) => (
-          <div key={index} className="card">
-            {/* Изображение услуги */}
-            <img src={service.image} alt={service.title} className="card-image" />
-            <div className="card-content">
-              {/* Название услуги */}
-              <h3>{service.title}</h3>
-              {/* Описание услуги: цена и поддержка */}
-              <p>{service.price}</p>
-              <p>{service.support}</p>
-            </div>
+          <div key={index} className="service-card">
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
           </div>
         ))}
       </div>
+      <a href="/services" className="services-btn">Подробнее об услугах</a>
     </section>
   );
 }
