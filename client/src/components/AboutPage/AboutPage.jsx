@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import ivan from '../../assets/ivan.jpg';
-import mark from '../../assets/mark1.jpg';
+import mark1 from '../../assets/mark1.jpg';
 import designer from '../../assets/disiner.jpg';
 import './AboutPage.css';
 
@@ -25,7 +25,7 @@ function AboutPage() {
           <h2>Наша команда</h2>
           <div className="team-member">
             <div className="member-photo">
-              <img src={mark} alt="mark" />
+              <img src={mark1} alt="mark1" />
             </div>
             <div className="member-info">
               <h3>Марк тут будешь ты</h3>
