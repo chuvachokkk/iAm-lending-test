@@ -15,10 +15,9 @@ import './index.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/iAm-lending-test">
       <div className="App">
         <Routes>
-          {/* Главная страница */}
           <Route
             path="/"
             element={
@@ -35,9 +34,7 @@ function App() {
               </>
             }
           />
-          {/* Страница "О нас" */}
           <Route path="/about" element={<AboutPage />} />
-          {/* Страница "Услуги" */}
           <Route path="/services" element={<ServicesPage />} />
         </Routes>
       </div>
