@@ -7,19 +7,19 @@ function Contacts() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Добавьте логику отправки формы
+    console.log('Form submitted:', formData); // Заглушка для отправки
     setSubmitted(true);
   };
 
   return (
     <section id="contacts" className="contacts">
       <h2>Готовы обсудить ваш проект?</h2>
-      <p>Оставьте заявку, и мы предложим решение уже сегодня.</p>
+      <p>Оставьте заявку, и мы свяжемся с вами в ближайшее время.</p>
       {!submitted ? (
         <form onSubmit={handleSubmit} className="contact-form">
           <label>
@@ -38,14 +38,11 @@ function Contacts() {
         </form>
       ) : (
         <div className="thank-you">
-          <p>Спасибо за заявку! Мы ответим в течение 1 часа.</p>
+          <p>Спасибо за заявку! Мы ответим вам в течение часа.</p>
         </div>
       )}
       <div className="trust-signals">
-         <p>Конфиденциально. Без спама.</p>
-         <p>тут идея сделать всплывающее окно , нужно ещё по сайтам по лазить по смотреть</p>
-         <p>Норм ? </p>
-         <p>Если есть идеи прям с дизайном что спиздить , ты говори) </p>
+        <p>Конфиденциальность гарантирована. Никакого спама.</p>
       </div>
     </section>
   );

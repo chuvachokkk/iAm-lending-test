@@ -1,0 +1,31 @@
+.reviews {
+  padding: 60px 40px;
+  text-align: center;
+  background: #F5F5F5;
+}
+
+.reviews h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.review {
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.review-author {
+  font-style: italic;
+  color: #C89B6E;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    padding: 40px 20px;
+  }
+}
