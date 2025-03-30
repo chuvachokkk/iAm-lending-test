@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom'; // Добавь импорт Link
+import logo from '../../assets/logo.png'; // Убедись, что путь к логотипу правильный
 import { FaBars, FaTimes, FaEnvelope } from 'react-icons/fa';
 import { SiTelegram, SiWhatsapp } from 'react-icons/si';
 import './Header.css';
@@ -11,7 +12,7 @@ function Header() {
   const toggleBurger = () => setBurgerOpen(!isBurgerOpen);
   const closeBurger = () => setBurgerOpen(false);
   const toggleModal = () => setModalOpen(!isModalOpen);
-  const closeModal = () => setModalOpen(false); // Новая функция для закрытия модалки
+  const closeModal = () => setModalOpen(false);
 
   return (
     <header className="header">
@@ -24,26 +25,18 @@ function Header() {
             <button className="burger-close-btn" onClick={closeBurger}>
               <FaTimes size={16} />
             </button>
-            <a href="/" onClick={closeBurger}>
-              Главная
-            </a>
-            <a href="/about" onClick={closeBurger}>
-              О нас
-            </a>
-            <a href="/services" onClick={closeBurger}>
-              Услуги
-            </a>
-            <a href="#contacts" onClick={closeBurger}>
-              Контакты
-            </a>
+            <Link to="/" onClick={closeBurger}>Главная</Link>
+            <Link to="/about" onClick={closeBurger}>О нас</Link>
+            <Link to="/services" onClick={closeBurger}>Услуги</Link>
+            <Link to="/#contacts" onClick={closeBurger}>Контакты</Link>
           </div>
         )}
       </div>
       <div className="header__center">
         <div className="logo">
-          <a href="/">
+          <Link to="/">
             <img src={logo} alt="iAM Logo" />
-          </a>
+          </Link>
         </div>
       </div>
       <div className="header__right">
@@ -59,7 +52,7 @@ function Header() {
                 href="https://t.me/your_telegram_handle"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={closeModal} // Закрываем модалку при клике
+                onClick={closeModal}
               >
                 <SiTelegram size={20} />
                 <span>Telegram</span>
@@ -68,15 +61,15 @@ function Header() {
                 href="https://wa.me/your_whatsapp_number"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={closeModal} // Закрываем модалку при клике
+                onClick={closeModal}
               >
                 <SiWhatsapp size={20} />
                 <span>WhatsApp</span>
               </a>
-              <a href="#contacts" onClick={closeModal}>
+              <Link to="/#contacts" onClick={closeModal}>
                 <FaEnvelope size={20} />
                 <span>Форма заявки</span>
-              </a>
+              </Link>
             </div>
           </div>
         )}
