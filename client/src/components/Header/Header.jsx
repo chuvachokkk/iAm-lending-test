@@ -24,15 +24,26 @@ function Header() {
             <button className="burger-close-btn" onClick={closeBurger}>
               <FaTimes size={16} />
             </button>
-            <a href="#about" onClick={closeBurger}>О нас</a>
-            <a href="#services" onClick={closeBurger}>Услуги</a>
-            <a href="#contacts" onClick={closeBurger}>Контакты</a>
+            <a href="/" onClick={closeBurger}>
+              Главная
+            </a>
+            <a href="/about" onClick={closeBurger}>
+              О нас
+            </a>
+            <a href="/services" onClick={closeBurger}>
+              Услуги
+            </a>
+            <a href="#contacts" onClick={closeBurger}>
+              Контакты
+            </a>
           </div>
         )}
       </div>
       <div className="header__center">
         <div className="logo">
-          <img src={logo} alt="iAM Logo" />
+          <a href="/">
+            <img src={logo} alt="iAM Logo" />
+          </a>
         </div>
       </div>
       <div className="header__right">
