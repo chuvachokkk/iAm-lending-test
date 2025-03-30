@@ -1,0 +1,104 @@
+.portfolio {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .portfolio h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .portfolio-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .portfolio-content {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /* Анимация при смене проекта */
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Левая часть – изображение проекта */
+  .portfolio-image {
+    flex: 1;
+  }
+  
+  .portfolio-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Правая часть – описание проекта */
+  .portfolio-description {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    background-color: #f9f9f9;
+  }
+  
+  .portfolio-description h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .portfolio-description p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Стрелки навигации */
+  .arrow {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #C89B6E;
+    transition: color 0.3s;
+    padding: 10px;
+  }
+  
+  .arrow:hover {
+    color: #C89B6E;
+  }
+  
+  .left-arrow {
+    margin-right: 10px;
+  }
+  
+  .right-arrow {
+    margin-left: 10px;
+  }
+
+  .steps-section {
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 100px; /* или больше, по необходимости */
+  }
+  
+  
+  /* Анимация появления */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

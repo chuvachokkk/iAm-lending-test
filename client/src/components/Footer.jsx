@@ -1,7 +1,7 @@
 import React from 'react';
 import { SiTelegram, SiInstagram } from 'react-icons/si';
 import { FaVk } from 'react-icons/fa';
-// import './Footer.css';
+import './Footer.css';
 
 function Footer() {
   return (

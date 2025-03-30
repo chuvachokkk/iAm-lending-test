@@ -1,0 +1,77 @@
+.steps-section {
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.steps-section h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Обертка для сетки карточек и линий */
+.steps-grid-wrapper {
+  position: relative;
+  width: 800px;  /* фиксированная ширина (подберите под ваш макет) */
+  height: 800px; /* фиксированная высота (подберите под ваш макет) */
+  margin: 0 auto;
+}
+
+/* Сетка карточек: 2 колонки, 2 строки */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  grid-template-rows: repeat(2, 400px);
+  gap: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Карточки этапов */
+.step-card {
+  width: 300px;
+  height: 300px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-card h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+}
+
+.step-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Для создания шахматного эффекта: сдвигаем карточки во второй колонке вниз */
+.steps-grid > :nth-child(even) {
+  margin-top: 180px;
+}
+
+/* Стили для линий соединения */
+.steps-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 700px;
+  height: 800px;
+  pointer-events: none;
+}
