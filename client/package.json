@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://github.com/chuvachokkk/iAm-lending-test",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,7 +12,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://chuvachokkk.github.io/iAm-lending-test",
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
