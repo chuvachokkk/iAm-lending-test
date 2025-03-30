@@ -8,8 +8,8 @@ import Steps from './components/Steps';
 import Reviews from './components/Reviews';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
+import ServiceGrid from './components/Services';
 import './index.css';
-
 
 function App() {
   return (
@@ -17,7 +17,8 @@ function App() {
       <Header />
       <Hero />
       <About />
-      <Services />
+      <ServiceGrid />
+      {/* <Services /> */}
       <Portfolio />
       <Steps />
       <Reviews />
@@ -26,5 +27,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
