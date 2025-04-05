@@ -37,43 +37,42 @@ const serviceCards = [
   },
 ];
 
+function ServiceCard({ card }) {
+  const [hoveredSubservice, setHoveredSubservice] = useState(null);
+
+  return (
+    <div className="service-card">
+      <h3>{card.title}</h3>
+      <div className="service-card-content">
+        <div className="service-options">
+          {card.subservices.map((sub, idx) => (
+            <button
+              key={idx}
+              className="service-option-btn"
+              onMouseEnter={() => setHoveredSubservice(sub)}
+              onMouseLeave={() => setHoveredSubservice(null)}
+            >
+              {sub.name}
+            </button>
+          ))}
+        </div>
+        <div className="service-description">
+          {hoveredSubservice ? hoveredSubservice.description : 'наведи курсор'}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ServiceGrid() {
-  const [selectedSubservice, setSelectedSubservice] = useState(null);
-
-  const closeModal = () => setSelectedSubservice(null);
-
   return (
     <section className="service-grid-section">
       <h2>Наши услуги</h2>
       <div className="service-grid">
         {serviceCards.map((card, index) => (
-          <div key={index} className="service-card">
-            <h3>{card.title}</h3>
-            <div className="service-options">
-              {card.subservices.map((sub, idx) => (
-                <button
-                  key={idx}
-                  className="service-option-btn"
-                  onClick={() => setSelectedSubservice(sub)}
-                >
-                  {sub.name}
-                </button>
-              ))}
-            </div>
-          </div>
+          <ServiceCard key={index} card={card} />
         ))}
       </div>
-      {selectedSubservice && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close-btn" onClick={closeModal}>
-              ✕
-            </button>
-            <h3>{selectedSubservice.name}</h3>
-            <p>{selectedSubservice.description}</p>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
