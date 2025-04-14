@@ -1,45 +1,50 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Portfolio from './components/Portfolio/Portfolio';
-import Steps from './components/Steps/Steps';
-import Reviews from './components/Reviews/Reviews';
-import Contacts from './components/Contacts/Contacts';
-import Footer from './components/Footer/Footer';
-import ServiceGrid from './components/ServiceGrid/ServiceGrid';
-import AboutPage from './components/AboutPage/AboutPage';
-import ServicesPage from './components/ServicesPage/ServicesPage';
-import './index.css';
+import React, { useEffect } from 'react'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import About from './components/About/About'
+import AboutPage from './components/AboutPage/AboutPage'
+import Contacts from './components/Contacts/Contacts'
+import Footer from './components/Footer/Footer'
+import Header from './components/Header/Header'
+import Hero from './components/Hero/Hero'
+import ServiceGrid from './components/ServiceGrid/ServiceGrid'
+import ServicesPage from './components/ServicesPage/ServicesPage'
+import Steps from './components/Steps/Steps'
+import useFadeIn from './hooks/useFadeIn'
+import './index.css'
 
 function App() {
-  return (
-    <Router basename="/iAm-lending-test">
-      <div className="App">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <Hero />
-                <ServiceGrid />
-                <Steps />
-                <About />
-                <Portfolio />
-                <Reviews />
-                <Contacts />
-                <Footer />
-              </>
-            }
-          />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+	useFadeIn() // Применяем наблюдатель ко всем страницам
+
+	useEffect(() => {
+		window.scrollTo(0, 0) // Прокручиваем страницу вверх при загрузке
+	}, [])
+
+	return (
+		<Router basename='/iAm-lending-test'>
+			<div className='App'>
+				<Routes>
+					<Route
+						path='/'
+						element={
+							<>
+								<Header />
+								<Hero />
+								<ServiceGrid />
+								<Steps />
+								<About />
+								{/* <Portfolio /> */}
+								{/* <Reviews /> */}
+								<Contacts />
+								<Footer />
+							</>
+						}
+					/>
+					<Route path='/about' element={<AboutPage />} />
+					<Route path='/services' element={<ServicesPage />} />
+				</Routes>
+			</div>
+		</Router>
+	)
 }
 
-export default App;
+export default App

@@ -4,6 +4,7 @@ import './Reviews.css';
 function Reviews() {
   return (
     <section id="reviews" className="reviews">
+      <section id="reviews" className="reviews fade-in-section"></section>
       <h2>Нас рекомендуют</h2>
       <div className="review">
         <p>

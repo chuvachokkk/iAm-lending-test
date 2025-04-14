@@ -1,25 +1,32 @@
-import React from 'react';
-import { SiTelegram, SiInstagram } from 'react-icons/si';
-import { FaVk } from 'react-icons/fa';
-import './Footer.css';
+import React from 'react'
+import { SiTelegram, SiWhatsapp } from 'react-icons/si' // Добавлен импорт SiWhatsapp
+import useFadeIn from '../../hooks/useFadeIn'
+import './Footer.css'
 
 function Footer() {
-  return (
-    <footer className="footer">
-      <p>© 2025 iAM. Все права защищены.</p>
-      <div className="socials">
-        <a href="https://t.me/yourchannel" target="_blank" rel="noopener noreferrer">
-          <SiTelegram size={28} color="#0088cc" />
-        </a>
-        <a href="https://vk.com/yourpage" target="_blank" rel="noopener noreferrer">
-          <FaVk size={28} color="#4a76a8" />
-        </a>
-        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
-          <SiInstagram size={28} color="#E1306C" />
-        </a>
-      </div>
-    </footer>
-  );
+	useFadeIn()
+
+	return (
+		<footer className='footer fade-in-section'>
+			<p>© 2025 iAM. Все права защищены.</p>
+			<div className='socials'>
+				<a
+					href='https://t.me/Flashnemo666'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					<SiTelegram size={28} color='#0088cc' />
+				</a>
+				<a
+					href='https://wa.me/+79146840220' // Замените на ваш номер телефона
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					<SiWhatsapp size={28} color='#25D366' />
+				</a>
+			</div>
+		</footer>
+	)
 }
 
-export default Footer;
+export default Footer

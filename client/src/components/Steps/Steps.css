@@ -1,110 +1,125 @@
 /* Steps.css */
 .steps-section {
-  padding: 40px;
-  background-color: #f9f9f9;
+	padding: 40px;
+	background-color: #f9f9f9;
 }
 
 .steps-container {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: flex-start;
-  gap: 40px; /* Расстояние между заголовком и контентом */
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	align-items: flex-start;
+	gap: 40px; /* Расстояние между заголовком и контентом */
 }
 
 .steps-title {
-  flex: 0 0 300px; /* Фиксированная ширина заголовка */
-  position: relative;
-  text-align: left;
+	flex: 0 0 300px; /* Фиксированная ширина заголовка */
+	position: relative;
+	text-align: left;
 }
 
 .steps-title h2 {
-  font-size: 36px;
-  color: #C89B6E;
-  font-weight: 700;
-  margin: 0;
-  padding-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  position: relative;
-  display: inline-block;
+	font-size: 36px;
+	color: #c89b6e;
+	font-weight: 700;
+	margin: 0;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	position: relative;
+	display: inline-block;
 }
 
 .steps-title .title-decor {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100px; /* Длина подчеркивания */
-  height: 4px;
-  background: linear-gradient(to right, #C89B6E, #a07a4e);
-  border-radius: 2px;
-  transition: width 0.3s ease; /* Анимация подчеркивания */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100px; /* Длина подчеркивания */
+	height: 4px;
+	background: linear-gradient(to right, #c89b6e, #a07a4e);
+	border-radius: 2px;
+	transition: width 0.3s ease; /* Анимация подчеркивания */
 }
 
 .steps-title:hover .title-decor {
-  width: 150px; /* Увеличиваем длину при наведении */
+	width: 150px; /* Увеличиваем длину при наведении */
 }
 
 .steps-content {
-  flex: 1;
-  max-width: 800px;
+	flex: 1;
+	max-width: 800px;
 }
 
 .step-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-  cursor: pointer;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+	cursor: pointer;
 }
 
 .step-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.step-card.active {
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .step-title {
-  margin: 0 0 10px;
-  font-size: 26px;
-  color: #C89B6E;
-  transition: color 0.3s ease;
+	margin: 0 0 10px;
+	font-size: 26px;
+	color: #c89b6e;
+	transition: color 0.3s ease;
 }
 
 .step-title:hover {
-  color: #a07a4e;
+	color: #a07a4e;
 }
 
 .step-card p {
-  margin: 0;
-  font-size: 20px;
-  color: #666;
-  line-height: 2.5;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+	margin: 0;
+	font-size: 20px;
+	color: #666;
+	line-height: 2.5;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
 }
 
 .step-card.active p {
-  max-height: 200px;
+	max-height: 200px;
 }
 
 .step-details {
-  margin-top: 10px;
-  padding-left: 20px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+	margin-top: 10px;
+	padding-left: 20px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
 }
 
 .step-card.active .step-details {
-  max-height: 300px;
+	max-height: 300px;
 }
 
 .step-details li {
-  font-size: 20px;
-  color: #555;
-  line-height: 1.4;
-  list-style: none; /* Без точек */
+	font-size: 20px;
+	color: #555;
+	line-height: 1.4;
+	list-style: none; /* Без точек */
+}
+
+.fade-in-section {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+	opacity: 1;
+	transform: translateY(0);
 }
