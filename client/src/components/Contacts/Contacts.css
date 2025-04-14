@@ -88,8 +88,20 @@
 
 .thank-you {
 	font-size: var(--font-size-medium);
-	color: var(--primary-color);
-	margin-top: 20px;
+	color: #fff; /* Белый текст для контраста */
+	margin: 20px auto; /* Центрирование по горизонтали */
+    padding: 30px;
+    width: 370px;
+	background: linear-gradient(
+		to right,
+		var(--primary-color),
+		var(--secondary-color)
+	); /* Яркий фон */
+	border-radius: 100px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень для выделения */
+	animation: fadeIn 0.5s ease-in-out;
+	font-weight: bold; /* Жирный текст */
+	text-align: center ; /* Центрирование текста */
 }
 
 .trust-signals {
@@ -107,6 +119,17 @@
 .fade-in-section.is-visible {
 	opacity: 1;
 	transform: translateY(0);
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @media (max-width: 768px) {

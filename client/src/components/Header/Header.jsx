@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaBars, FaEnvelope, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { SiTelegram, SiWhatsapp } from 'react-icons/si'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
@@ -57,7 +57,7 @@ function Header() {
 							</button>
 							<h3>Свяжитесь с нами</h3>
 							<a
-								href='https://t.me/your_telegram_handle'
+								href='https://t.me/Flashnemo666'
 								target='_blank'
 								rel='noopener noreferrer'
 								onClick={closeModal}
@@ -66,7 +66,7 @@ function Header() {
 								<span>Telegram</span>
 							</a>
 							<a
-								href='https://wa.me/your_whatsapp_number'
+								href='https://wa.me/+79146840220'
 								target='_blank'
 								rel='noopener noreferrer'
 								onClick={closeModal}
@@ -74,10 +74,10 @@ function Header() {
 								<SiWhatsapp size={20} />
 								<span>WhatsApp</span>
 							</a>
-							<Link to='/#contacts' onClick={closeModal}>
+							{/* <Link to='/#contacts' onClick={closeModal}>
 								<FaEnvelope size={20} />
 								<span>Форма заявки</span>
-							</Link>
+							</Link> */}
 						</div>
 					</div>
 				)}
