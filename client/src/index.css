@@ -4,33 +4,91 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--primary-color-light: #c89b6e;
+	--secondary-color-light: #a17a4f;
+	--background-color-light: #ffffff;
+	--text-color-light: #333333;
+
+	--primary-color-dark: #f0a500;
+	--secondary-color-dark: #555555;
+	--background-color-dark: #2b2b2b;
+	--text-color-dark: #e0e0e0;
+}
+
+body.light {
+	--primary-color: var(--primary-color-light);
+	--secondary-color: var(--secondary-color-light);
+	--background-color: var(--background-color-light);
+	--text-color: var(--text-color-light);
+}
+
+body.dark {
+	--primary-color: var(--primary-color-dark);
+	--secondary-color: var(--secondary-color-dark);
+	--background-color: var(--background-color-dark);
+	--text-color: var(--text-color-dark);
+}
+
+/* index.css */
 body {
+	background-color: var(--background-color);
+	color: var(--text-color);
 	font-family: 'Arial', sans-serif;
-	color: #333333;
 	line-height: 1.6;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
 h2,
 h3 {
-	font-weight: 700;
+	color: #ffffff;
+	font-weight: bold;
 }
 
 a {
+	color: #f0a500;
 	text-decoration: none;
-	color: inherit;
+}
+
+a:hover {
+	color: #ffcc00;
 }
 
 button {
+	background-color: #444444;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
 	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
-/* index.css */
+button:hover {
+	background-color: #555555;
+}
 
+input,
+textarea {
+	background-color: #3a3a3a;
+	color: #ffffff;
+	border: 1px solid #555555;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+input:focus,
+textarea:focus {
+	border-color: #f0a500;
+	outline: none;
+}
+
+/* Ускоряем анимацию появления компонентов */
 .fade-in-section {
 	opacity: 0;
 	transform: translateY(20px);
-	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+	transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* Было 0.6s, стало 0.4s */
 }
 
 .fade-in-section.is-visible {

@@ -72,12 +72,20 @@ const stepsData = [
 ]
 
 function Steps() {
-	const [activeStep, setActiveStep] = useState(null)
+	const [activeStep, setActiveStep] = useState({})
 
 	useFadeIn()
 
 	const toggleStep = index => {
-		setActiveStep(activeStep === index ? null : index)
+		setActiveStep(prevActiveStep => {
+			const newActiveSteps = { ...prevActiveStep }
+			if (newActiveSteps[index]) {
+				delete newActiveSteps[index]
+			} else {
+				newActiveSteps[index] = true
+			}
+			return newActiveSteps
+		})
 	}
 
 	return (
@@ -91,11 +99,11 @@ function Steps() {
 					{stepsData.map((step, index) => (
 						<div
 							key={index}
-							className={`step-card ${activeStep === index ? 'active' : ''}`}
+							className={`step-card ${activeStep[index] ? 'active' : ''}`}
 							onClick={() => toggleStep(index)}
 						>
 							<h3 className='step-title'>{step.title}</h3>
-							{activeStep === index && (
+							{activeStep[index] && (
 								<>
 									<p>{step.description}</p>
 									{step.details && (

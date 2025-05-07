@@ -1,7 +1,8 @@
 /* Steps.css */
 .steps-section {
 	padding: 40px;
-	background-color: #f9f9f9;
+	background-color: #333333;
+	color: #ffffff;
 }
 
 .steps-container {
@@ -51,8 +52,9 @@
 }
 
 .step-card {
-	background-color: #fff;
-	border: 1px solid #ddd;
+	background-color: #444444;
+	color: #ffffff;
+	border: 1px solid #555555;
 	border-radius: 8px;
 	padding: 20px;
 	margin-bottom: 20px;
@@ -62,6 +64,7 @@
 }
 
 .step-card:hover {
+	background-color: #555555;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -83,15 +86,17 @@
 .step-card p {
 	margin: 0;
 	font-size: 20px;
-	color: #666;
+	color: #ffffff; /* Устанавливаем белый цвет текста, как в этапах работы */
 	line-height: 2.5;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.3s ease;
 }
 
+/* Исправляем отображение текста внутри активного этапа */
 .step-card.active p {
-	max-height: 200px;
+	max-height: 500px; /* Увеличиваем максимальную высоту для отображения текста */
+	overflow: visible; /* Убираем обрезку текста */
 }
 
 .step-details {
@@ -108,7 +113,7 @@
 
 .step-details li {
 	font-size: 20px;
-	color: #555;
+	color: #ffffff; /* Устанавливаем белый цвет текста для деталей этапов */
 	line-height: 1.4;
 	list-style: none; /* Без точек */
 }

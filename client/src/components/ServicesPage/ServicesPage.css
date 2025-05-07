@@ -2,12 +2,14 @@
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	background: #2b2b2b;
+	color: #e0e0e0;
 }
 
 .services-content {
 	flex: 1;
 	padding: 60px 40px;
-	background: #f5f5f5;
+	background: #333333 !important;
 }
 
 .services-header {
@@ -17,23 +19,24 @@
 
 .services-header h1 {
 	font-size: 3rem;
-	color: #333333;
+	color: #f0a500;
 	margin-bottom: 20px;
 }
 
 .discuss-btn {
 	padding: 12px 24px;
-	background: #c89b6e;
+	background: #444444;
 	color: #ffffff;
-	border: none;
+	border: 1px solid #555555;
 	border-radius: 5px;
 	font-size: 1.2rem;
 	cursor: pointer;
-	transition: background 0.3s ease;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .discuss-btn:hover {
-	background: #a17a4f;
+	background: #555555;
+	color: #f0a500;
 }
 
 .form-overlay {
@@ -148,10 +151,10 @@
 }
 
 .pricing-card {
-	background: #ffffff;
-	padding: 30px;
-	border-radius: 12px;
-	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+	background: #3a3a3a !important;
+	color: #e0e0e0 !important;
+	border: 1px solid #555555 !important;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
@@ -159,8 +162,8 @@
 }
 
 .pricing-card:hover {
-	transform: scale(1.05);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+	transform: scale(1.05) !important;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
 .pricing-card::before {
@@ -183,13 +186,13 @@
 
 .pricing-card h3 {
 	font-size: 1.8rem;
-	color: #333333;
+	color: #f0a500 !important;
 	margin-bottom: 10px;
 }
 
 .pricing-card .card-subtitle {
 	font-size: 1rem;
-	color: #666666;
+	color: #cccccc !important;
 	margin-bottom: 20px;
 }
 
@@ -207,7 +210,7 @@
 .pricing-card .price {
 	font-size: 1.5rem;
 	font-weight: bold;
-	color: #c89b6e;
+	color: #f0a500 !important;
 	margin-top: 20px;
 }
 
